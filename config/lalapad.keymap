@@ -184,7 +184,7 @@
 
             bindings = <
 &kp ESC    &kp Q             &kp W         &kp E               &kp R                    &kp T                     &kp Y                   &kp U            &kp I            &kp O       &kp P           &mt EQUAL MINUS
-&kp LCTRL  &mt LCTRL A       &kp S         &kp D               &kp F                    &kp G                     &kp H                   &kp J            &kp K            &kp L       &mt2 SEMI LBKT  &lt 5 ENTER
+&kp LCTRL  &mt LCTRL A       &kp S         &kp D               &kp F                    &kp G                     &kp H                   &kp J            &kp K            &kp L       &mt2 SEMI LBKT  &mt2 BACKSPACE ENTER
 &kp LSHFT  &mt LEFT_SHIFT Z  &kp X         &kp C               &kp V                    &kp B                     &kp N                   &kp M            &kp COMMA        &kp PERIOD  &mt2 UP SLASH   &kp BACKSLASH
 &kp LCTRL  &kp LEFT_WIN      &kp LEFT_ALT  &mt LEFT_WIN SPACE  &lt SECONDARY_LAYER TAB  &lt TERTIARY_LAYER LANG2  &lt SYSTEM_LAYER LANG1  &lt 1 BACKSPACE  &lt 2 ENTER      &kp LEFT    &kp DOWN        &kp RIGHT
                              &allow_end    &allow_pagedown     &allow_home              &allow_pageup             &allow_pageup           &allow_home      &allow_pagedown  &allow_end
@@ -242,11 +242,11 @@
         SCROLL_R_LAYER {
             display-name = "scroll_r_layer";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans           &trans  &trans         &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans           &trans  &trans         &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans           &trans  &trans         &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans           &trans  &trans         &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &allow_pagedown  &trans  &allow_pageup  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
