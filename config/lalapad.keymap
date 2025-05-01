@@ -175,6 +175,22 @@
         };
     };
 
+    macros {
+        new_macro_1: new_macro_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N0 &kp N2 &kp N0 &kp N9 &kp ENTER>;
+            label = "NEW_MACRO_1";
+        };
+
+        new_macro_2: new_macro_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(X) &kp STAR &kp UNDER &kp POUND &kp G &kp QMARK &kp LS(E) &kp LS(X) &kp LS(Y) &kp Z &kp STAR &kp N8 &kp LS(J) &kp D &kp P &kp ENTER>;
+            label = "NEW_MACRO_2";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -183,11 +199,11 @@
             sensor-bindings = <&scroll_down_up>, <&scroll_up_down>;
 
             bindings = <
-&kp ESC    &kp Q             &kp W         &kp E               &kp R                    &kp T                     &kp Y                   &kp U            &kp I            &kp O       &kp P           &mt EQUAL MINUS
-&kp LCTRL  &mt LCTRL A       &kp S         &kp D               &kp F                    &kp G                     &kp H                   &kp J            &kp K            &kp L       &mt2 SEMI LBKT  &mt2 BACKSPACE ENTER
-&kp LSHFT  &mt LEFT_SHIFT Z  &kp X         &kp C               &kp V                    &kp B                     &kp N                   &kp M            &kp COMMA        &kp PERIOD  &mt2 UP SLASH   &kp BACKSLASH
-&kp LCTRL  &kp LEFT_WIN      &kp LEFT_ALT  &mt LEFT_WIN SPACE  &lt SECONDARY_LAYER TAB  &lt TERTIARY_LAYER LANG2  &lt SYSTEM_LAYER LANG1  &lt 1 BACKSPACE  &lt 2 ENTER      &kp LEFT    &kp DOWN        &kp RIGHT
-                             &allow_end    &allow_pagedown     &allow_home              &allow_pageup             &allow_pageup           &allow_home      &allow_pagedown  &allow_end
+&kp ESC       &kp Q              &kp W         &kp E               &kp R        &kp T          &kp Y          &kp U            &kp I            &kp O       &kp P           &mt EQUAL MINUS
+&kp LCTRL     &mt2 LCTRL A       &kp S         &kp D               &kp F        &kp G          &kp H          &kp J            &kp K            &kp L       &mt2 SEMI LBKT  &mt2 BACKSPACE ENTER
+&kp LSHFT     &mt2 LEFT_SHIFT Z  &kp X         &kp C               &kp V        &kp B          &kp N          &kp M            &kp COMMA        &kp PERIOD  &mt2 UP SLASH   &mt2 LG(SPACE) BACKSLASH
+&new_macro_1  &new_macro_2       &kp LEFT_ALT  &mt LEFT_WIN SPACE  &lt 1 TAB    &lt 3 LANG2    &lt 2 LANG1    &lt 1 BACKSPACE  &lt 3 ENTER      &kp LEFT    &kp DOWN        &kp RIGHT
+                                 &allow_end    &allow_pagedown     &allow_home  &allow_pageup  &allow_pageup  &allow_home      &allow_pagedown  &allow_end
             >;
         };
 
@@ -204,17 +220,6 @@
             >;
         };
 
-        TERTIARY_LAYER {
-            display-name = "tertiary_layer";
-            bindings = <
-&trans  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)     &kp LS(N7)     &kp LS(N8)     &kp LS(N9)            &kp LS(N0)             &trans
-&trans  &kp F6      &kp F7      &kp F8      &kp F9      &kp F10     &kp MINUS      &kp EQUAL      &kp GRAVE      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SQT
-&trans  &kp F11     &kp F12     &kp F13     &kp F14     &kp F15     &kp LS(MINUS)  &kp LS(EQUAL)  &kp LS(GRAVE)  &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &kp LS(SQT)
-&trans  &trans      &trans      &trans      &trans      &trans      &trans         &trans         &trans         &trans                &trans                 &trans
-                    &trans      &trans      &trans      &trans      &trans         &trans         &trans         &trans
-            >;
-        };
-
         SYSTEM_LAYER {
             display-name = "system_layer";
             sensor-bindings = <&scroll_down_up>, <&volume_up_down>;
@@ -228,11 +233,22 @@
             >;
         };
 
+        TERTIARY_LAYER {
+            display-name = "tertiary_layer";
+            bindings = <
+&trans  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)     &kp LS(N7)     &kp LS(N8)     &kp LS(N9)            &kp LS(N0)             &trans
+&trans  &kp F6      &kp F7      &kp F8      &kp F9      &kp F10     &kp MINUS      &kp EQUAL      &kp GRAVE      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SQT
+&trans  &kp F11     &kp F12     &kp F13     &kp F14     &kp F15     &kp LS(MINUS)  &kp LS(EQUAL)  &kp LS(GRAVE)  &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &kp LS(SQT)
+&trans  &trans      &trans      &trans      &trans      &trans      &trans         &trans         &trans         &trans                &trans                 &trans
+                    &trans      &trans      &trans      &trans      &trans         &trans         &trans         &trans
+            >;
+        };
+
         MOUSE_R_LAYER {
             display-name = "mouse_r_layer";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &mo SCROLL_R_LAYER
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &mo 5
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB4   &mkp MB5   &trans     &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans
                 &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans
@@ -253,11 +269,11 @@
         MOUSE_L_LAYER {
             display-name = "mouse_l_layer";
             bindings = <
-&trans              &trans     &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&mo SCROLL_R_LAYER  &mkp RCLK  &mkp MCLK  &mkp LCLK  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans              &trans     &mkp MB5   &mkp MB4   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans              &trans     &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                               &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&mo 5   &mkp RCLK  &mkp MCLK  &mkp LCLK  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &mkp MB5   &mkp MB4   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                   &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
