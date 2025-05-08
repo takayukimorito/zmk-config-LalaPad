@@ -179,17 +179,6 @@
             label = "TAP_BCS";
             #binding-cells = <0>;
             bindings = <&lt 1 BACKSPACE>, <&kp BACKSPACE>;
-
-            tapping-term-ms = <100>;
-        };
-
-        tap_ent: tap_ent {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_ENT";
-            #binding-cells = <0>;
-            bindings = <&lt 3 ENTER>, <&kp LS(ENTER)>;
-
-            tapping-term-ms = <100>;
         };
     };
 
