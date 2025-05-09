@@ -180,7 +180,7 @@
             #binding-cells = <0>;
             bindings = <&lt 1 BACKSPACE>, <&kp BACKSPACE>;
 
-            tapping-term-ms = <120>;
+            tapping-term-ms = <200>;
         };
     };
 
