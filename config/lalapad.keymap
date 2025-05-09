@@ -179,6 +179,8 @@
             label = "TAP_BCS";
             #binding-cells = <0>;
             bindings = <&lt 1 BACKSPACE>, <&kp BACKSPACE>;
+
+            tapping-term-ms = <120>;
         };
     };
 
