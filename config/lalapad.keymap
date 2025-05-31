@@ -240,6 +240,13 @@
             bindings = <&kp LS(X) &kp STAR &kp UNDER &kp POUND &kp G &kp QMARK &kp LS(E) &kp LS(X) &kp LS(Y) &kp Z &kp STAR &kp N8 &kp LS(J) &kp D &kp P &kp KP_ENTER>;
             label = "NEW_MACRO_2";
         };
+
+        new_macro3: new_macro3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mkp LCLK &mkp LCLK>;
+            label = "NEW_MACRO3";
+        };
     };
 
     keymap {
@@ -298,11 +305,11 @@
         MOUSE_R_LAYER {
             display-name = "mouse_r_layer";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans          &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp LCLK  &mkp_mo 5 MCLK  &mkp RCLK  &mo 5
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &mkp MB4   &mkp MB5        &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans          &trans     &trans
-                &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans
+&trans  &trans  &trans     &trans          &trans     &trans       &trans  &trans       &trans     &trans          &trans     &trans
+&trans  &trans  &mkp LCLK  &mkp_mo 7 MCLK  &mkp RCLK  &new_macro3  &trans  &new_macro3  &mkp LCLK  &mkp_mo 5 MCLK  &mkp RCLK  &mo 5
+&trans  &trans  &mkp MB4   &mkp MB5        &trans     &trans       &trans  &trans       &mkp MB4   &mkp MB5        &trans     &trans
+&trans  &trans  &trans     &trans          &trans     &trans       &trans  &trans       &trans     &trans          &trans     &trans
+                &trans     &trans          &trans     &trans       &trans  &trans       &trans     &trans
             >;
         };
 
@@ -344,7 +351,7 @@
 &trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N5)  &kp LS(NUMBER_6)  &kp LS(N7)     &kp LS(N8)     &kp LS(N9)            &kp LS(N0)             &kp LS(LG(D))
 &trans  &trans            &trans            &trans            &trans            &trans      &kp MINUS         &kp EQUAL      &kp GRAVE      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans
 &trans  &trans            &trans            &trans            &trans            &trans      &kp LS(MINUS)     &kp LS(EQUAL)  &kp LS(GRAVE)  &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &trans
-&trans  &trans            &trans            &trans            &trans            &trans      &trans            &trans         &trans         &trans                &trans                 &trans
+&trans  &trans            &trans            &kp LS(ENTER)     &trans            &trans      &trans            &trans         &trans         &trans                &trans                 &trans
                           &trans            &trans            &trans            &trans      &trans            &trans         &trans         &trans
             >;
         };
