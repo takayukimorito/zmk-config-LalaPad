@@ -296,11 +296,11 @@
             sensor-bindings = <&brush_size>, <&scroll_left_right>;
 
             bindings = <
-&kp LS(T)       &kp LS(Q)      &kp LG(LEFT_SHIFT)  &kp SPACE             &kp LG(Z)          &mkp RCLK        &kp PAGE_UP    &kp PRINTSCREEN  &kp KP_SLASH     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9
-&lt2 9 KP_PLUS  &lt2 10 LS(S)  &lt2 11 LS(LA(G))   &lt2 12 LG(KP_MINUS)  &lt2 9 LS(P)       &lt2 10 LS(O)    &kp HOME       &kp END          &kp KP_ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6
-&kp LA(K)       &kp Z          &kp LEFT_ALT        &kp LG(KP_PLUS)       &mt2 LEFT_SHIFT E  &mt2 LEFT_GUI B  &kp PAGE_DOWN  &kp KP_MINUS     &kp KP_PLUS      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3
-&kp LA(J)       &kp LS(K)      &kp LA(S)           &lt2 9 LG(Y)          &lt2 10 B          &trans           &tog 0         &kp DELETE       &trans           &kp KP_NUMBER_0  &dot_comma       &kp KP_ENTER
-                               &mt2 N8 J           &mt2 N1 U             &kp SLASH          &mt2 V I         &trans         &trans           &trans           &trans
+&kp LS(T)       &kp LS(Q)      &kp LG(LEFT_SHIFT)  &kp SPACE            &kp LG(Z)          &mkp RCLK        &kp PAGE_UP    &kp PRINTSCREEN  &kp KP_SLASH     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9
+&lt2 9 KP_PLUS  &lt2 10 LS(S)  &lt2 11 LS(LA(G))   &lt2 12 LG(KP_PLUS)  &lt2 9 LS(P)       &lt2 10 LS(O)    &kp HOME       &kp END          &kp KP_ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6
+&kp LA(K)       &kp Z          &kp LEFT_ALT        &kp LG(KP_MINUS)     &mt2 LEFT_SHIFT E  &mt2 LEFT_GUI B  &kp PAGE_DOWN  &kp KP_MINUS     &kp KP_PLUS      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3
+&kp LA(J)       &kp LS(K)      &kp LA(S)           &lt2 9 LG(Y)         &lt2 10 B          &trans           &tog 0         &kp DELETE       &trans           &kp KP_NUMBER_0  &dot_comma       &kp KP_ENTER
+                               &mt2 N8 J           &mt2 N1 U            &kp SLASH          &mt2 V I         &trans         &trans           &trans           &trans
             >;
         };
 
