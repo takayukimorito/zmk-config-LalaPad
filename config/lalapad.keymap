@@ -307,7 +307,7 @@
             bindings = <
 &trans  &trans  &trans     &trans          &trans     &trans       &trans  &trans       &trans     &trans          &trans     &trans
 &trans  &trans  &mkp LCLK  &mkp_mo 5 MCLK  &mkp RCLK  &new_macro3  &trans  &new_macro3  &mkp LCLK  &mkp_mo 5 MCLK  &mkp RCLK  &mo 5
-&trans  &trans  &mkp MB4   &mkp MB5        &trans     &trans       &trans  &trans       &mkp MB4   &mkp MB5        &trans     &trans
+&trans  &trans  &trans     &trans          &trans     &trans       &trans  &trans       &mkp MB4   &mkp MB5        &trans     &trans
 &trans  &trans  &trans     &trans          &trans     &trans       &trans  &trans       &trans     &trans          &trans     &trans
                 &trans     &trans          &trans     &trans       &trans  &trans       &trans     &trans
             >;
