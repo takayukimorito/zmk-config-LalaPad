@@ -224,6 +224,15 @@
 
             label = "MKP_TAP";
         };
+
+        brush_size: brush_size {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp NUMBER_6>, <&kp N9>;
+
+            tap-ms = <20>;
+            label = "BRUSH_SIZE";
+        };
     };
 
     macros {
@@ -247,6 +256,14 @@
             bindings = <&mkp LCLK &mkp LCLK>;
             label = "NEW_MACRO3";
         };
+
+        psd: psd {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mkp LCLK>, <&macro_wait_time 50>, <&kp LA(M)>;
+
+            label = "PSD";
+        };
     };
 
     keymap {
@@ -267,14 +284,14 @@
 
         SECONDARY_LAYER {
             display-name = "secondary_layer";
-            sensor-bindings = <&scroll_left_right>, <&scroll_left_right>;
+            sensor-bindings = <&brush_size>, <&scroll_left_right>;
 
             bindings = <
-&kp TILDE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &kp PAGE_UP    &kp PRINTSCREEN  &kp KP_SLASH     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9
-&trans     &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp HOME       &kp END          &kp KP_ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6
-&trans     &trans        &trans        &trans        &trans        &trans        &kp PAGE_DOWN  &kp KP_MINUS     &kp KP_PLUS      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3
-&trans     &trans        &trans        &trans        &trans        &trans        &tog 0         &kp DELETE       &trans           &kp KP_NUMBER_0  &dot_comma       &kp KP_ENTER
-                         &trans        &trans        &trans        &trans        &trans         &trans           &trans           &trans
+&kp LS(T)       &kp LS(Q)      &kp LG(LEFT_SHIFT)  &kp SPACE             &kp LG(Z)          &mkp RCLK        &kp PAGE_UP    &kp PRINTSCREEN  &kp KP_SLASH     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9
+&lt2 9 KP_PLUS  &lt2 10 LS(S)  &lt2 11 LS(LA(G))   &lt2 12 LG(KP_MINUS)  &lt2 9 LS(P)       &lt2 10 LS(O)    &kp HOME       &kp END          &kp KP_ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6
+&kp LA(K)       &kp Z          &kp LEFT_ALT        &kp LG(KP_PLUS)       &mt2 LEFT_SHIFT E  &mt2 LEFT_GUI B  &kp PAGE_DOWN  &kp KP_MINUS     &kp KP_PLUS      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3
+&kp LA(J)       &kp LS(K)      &kp LA(S)           &lt2 9 LG(Y)          &mt2 LGUI B        &trans           &tog 0         &kp DELETE       &trans           &kp KP_NUMBER_0  &dot_comma       &kp KP_ENTER
+                               &mt2 N8 J           &mt2 N1 U             &kp SLASH          &mt2 V I         &trans         &trans           &trans           &trans
             >;
         };
 
@@ -353,6 +370,46 @@
 &trans  &trans            &trans            &trans            &trans            &trans      &kp LS(MINUS)     &kp LS(EQUAL)  &kp LS(GRAVE)  &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &kp LS(APOSTROPHE)
 &trans  &trans            &trans            &kp LS(ENTER)     &trans            &trans      &trans            &trans         &trans         &trans                &trans                 &trans
                           &trans            &trans            &trans            &trans      &trans            &trans         &trans         &trans
+            >;
+        };
+
+        layer_9 {
+            bindings = <
+&trans  &trans  &trans     &trans         &trans         &trans     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans         &kp LG(C)      &kp LG(V)  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans         &trans         &trans     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &kp LS(SLASH)  &trans         &trans     &trans  &trans  &trans  &trans  &trans  &trans
+                &kp LS(B)  &kp O          &kp LC(LG(M))  &kp X      &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_10 {
+            bindings = <
+&trans  &trans  &trans           &trans           &trans           &trans     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans           &trans           &kp LC(LG(M))    &kp LG(X)  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans           &trans           &trans           &trans     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans           &kp LS(LA(O))    &kp LS(LA(W))    &trans     &trans  &trans  &trans  &trans  &trans  &trans
+                &kp KP_NUMBER_9  &kp KP_NUMBER_5  &kp KP_NUMBER_4  &kp KP_N7  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_11 {
+            bindings = <
+&trans  &trans  &trans           &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans           &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans           &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans           &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &kp KP_NUMBER_1  &kp LG(D)  &kp C   &kp A   &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_12 {
+            bindings = <
+&trans  &trans  &trans     &trans     &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans     &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans     &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &kp LS(F)  &kp LS(G)  &trans     &trans  &trans  &trans  &trans  &trans  &trans
+                &kp LA(C)  &psd       &kp LA(I)  &kp LA(F)  &trans  &trans  &trans  &trans
             >;
         };
     };
