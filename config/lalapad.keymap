@@ -252,6 +252,13 @@
 
             label = "PSD";
         };
+
+        dclick: dclick {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mkp LCLK &mkp LCLK>;
+            label = "DCLICK";
+        };
     };
 
     keymap {
@@ -310,11 +317,11 @@
         MOUSE_R_LAYER {
             display-name = "mouse_r_layer";
             bindings = <
-&trans  &trans  &trans     &trans          &trans     &trans       &trans  &trans       &trans     &trans          &trans     &trans
-&trans  &trans  &mkp LCLK  &mkp_mo 5 MCLK  &mkp RCLK  &new_macro3  &trans  &new_macro3  &mkp LCLK  &mkp_mo 5 MCLK  &mkp RCLK  &mo 5
-&trans  &trans  &trans     &trans          &trans     &trans       &trans  &trans       &mkp MB4   &mkp MB5        &trans     &trans
-&trans  &trans  &trans     &trans          &trans     &trans       &trans  &trans       &trans     &trans          &trans     &trans
-                &trans     &trans          &trans     &trans       &trans  &trans       &trans     &trans
+&trans  &trans  &trans     &trans          &trans     &trans   &trans  &trans   &trans     &trans          &trans     &trans
+&trans  &trans  &mkp LCLK  &mkp_mo 5 MCLK  &mkp RCLK  &dclick  &trans  &dclick  &mkp LCLK  &mkp_mo 5 MCLK  &mkp RCLK  &mo 5
+&trans  &trans  &trans     &trans          &trans     &trans   &trans  &trans   &mkp MB4   &mkp MB5        &trans     &trans
+&trans  &trans  &trans     &trans          &trans     &trans   &trans  &trans   &trans     &trans          &trans     &trans
+                &trans     &trans          &trans     &trans   &trans  &trans   &trans     &trans
             >;
         };
 
