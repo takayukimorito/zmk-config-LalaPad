@@ -317,11 +317,11 @@
         MOUSE_R_LAYER {
             display-name = "mouse_r_layer";
             bindings = <
-&trans  &trans  &trans     &trans          &trans     &trans   &trans  &trans   &trans     &trans          &trans     &trans
-&trans  &trans  &mkp LCLK  &mkp_mo 5 MCLK  &mkp RCLK  &dclick  &trans  &dclick  &mkp LCLK  &mkp_mo 5 MCLK  &mkp RCLK  &mo 5
-&trans  &trans  &trans     &trans          &trans     &trans   &trans  &trans   &mkp MB4   &mkp MB5        &trans     &trans
-&trans  &trans  &trans     &trans          &trans     &trans   &trans  &trans   &trans     &trans          &trans     &trans
-                &trans     &trans          &trans     &trans   &trans  &trans   &trans     &trans
+&trans  &trans     &trans          &trans     &trans   &trans  &trans  &trans   &trans     &trans          &trans     &trans
+&trans  &mkp RCLK  &mkp_mo 5 MCLK  &mkp LCLK  &dclick  &trans  &trans  &dclick  &mkp LCLK  &mkp_mo 5 MCLK  &mkp RCLK  &trans
+&trans  &trans     &mkp MB5        &mkp MB4   &trans   &trans  &trans  &trans   &mkp MB4   &mkp MB5        &trans     &trans
+&trans  &trans     &trans          &trans     &trans   &trans  &trans  &trans   &trans     &trans          &trans     &trans
+                   &trans          &trans     &trans   &trans  &trans  &trans   &trans     &trans
             >;
         };
 
@@ -339,11 +339,11 @@
         MOUSE_L_LAYER {
             display-name = "mouse_l_layer";
             bindings = <
-&trans  &trans     &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&mo 5   &mkp RCLK  &mkp MCLK  &mkp LCLK  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &mkp MB5   &mkp MB4   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                   &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans     &trans     &trans  &trans  &trans  &trans   &trans     &trans          &trans     &trans
+&trans  &mkp RCLK  &mkp MCLK  &mkp LCLK  &trans  &trans  &trans  &dclick  &mkp LCLK  &mkp_mo 5 MCLK  &mkp RCLK  &trans
+&trans  &trans     &mkp MB5   &mkp MB4   &trans  &trans  &trans  &trans   &mkp MB4   &mkp MB5        &trans     &trans
+&trans  &trans     &trans     &trans     &trans  &trans  &trans  &trans   &trans     &trans          &trans     &trans
+                   &trans     &trans     &trans  &trans  &trans  &trans   &trans     &trans
             >;
         };
 
