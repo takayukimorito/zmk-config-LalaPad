@@ -273,7 +273,7 @@
 &kp LCTRL     &mt2 LCTRL A         &kp S            &kp D                &kp F          &kp G                       &kp H             &mkp_tap LCLK J   &mkp_tap LCLK K  &lt 5 L     &mt2 RIGHT_SHIFT COLON  &mt2 LG(LEFT_SHIFT) APOSTROPHE
 &kp LSHFT     &mt2 LEFT_SHIFT Z    &mt2 LEFT_ALT X  &kp C                &kp V          &kp B                       &kp N             &kp M             &kp COMMA        &kp PERIOD  &mt2 UP SLASH           &mt2 LG(SPACE) BSLH
 &kp LEFT_GUI  &mkp RCLK            &mkp LCLK        &mt2 LEFT_WIN SPACE  &lt2 2 TAB     &tog 1                      &tap_lang         &lt2 2 BACKSPACE  &lt 8 ENTER      &kp LEFT    &kp DOWN                &kp RIGHT
-                                   &kp ESCAPE       &kp LG(SPACE)        &kp LS(ENTER)  &mt2 LANGUAGE_2 LANGUAGE_1  &allow_pageup     &allow_home       &allow_pagedown  &allow_end
+                                   &kp ESCAPE       &kp LG(SPACE)        &kp LS(LA(S))  &mt2 LANGUAGE_2 LANGUAGE_1  &allow_pageup     &allow_home       &allow_pagedown  &allow_end
             >;
         };
 
