@@ -374,11 +374,11 @@
 
         layer_8 {
             bindings = <
-&trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N5)  &kp LS(NUMBER_6)  &kp LS(N7)     &kp LS(N8)     &kp LS(N9)            &kp LS(N0)             &kp LS(LG(D))
-&trans  &trans            &trans            &trans            &trans            &trans      &kp MINUS         &kp EQUAL      &kp GRAVE      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp APOSTROPHE
-&trans  &trans            &trans            &trans            &trans            &trans      &kp LS(MINUS)     &kp LS(EQUAL)  &kp LS(GRAVE)  &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &kp LS(APOSTROPHE)
-&trans  &trans            &trans            &kp LS(ENTER)     &trans            &trans      &trans            &trans         &trans         &trans                &trans                 &trans
-                          &trans            &trans            &trans            &trans      &trans            &trans         &trans         &trans
+&trans  &kp LS(NUMBER_1)   &kp LS(NUMBER_2)    &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N5)  &kp LS(NUMBER_6)  &kp LS(N7)     &kp LS(N8)     &kp LS(N9)            &kp LS(N0)             &kp LS(LG(D))
+&trans  &kp LS(SEMICOLON)  &kp LS(APOSTROPHE)  &kp LG(SPACE)     &trans            &trans      &kp MINUS         &kp EQUAL      &kp GRAVE      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp APOSTROPHE
+&trans  &kp SEMICOLON      &kp APOSTROPHE      &kp LS(LA(S))     &trans            &trans      &kp LS(MINUS)     &kp LS(EQUAL)  &kp LS(GRAVE)  &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &kp LS(APOSTROPHE)
+&trans  &trans             &trans              &kp LS(ENTER)     &trans            &trans      &trans            &trans         &trans         &trans                &trans                 &trans
+                           &trans              &trans            &trans            &trans      &trans            &trans         &trans         &trans
             >;
         };
 
