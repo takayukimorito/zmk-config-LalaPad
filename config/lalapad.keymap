@@ -249,6 +249,18 @@
             #binding-cells = <0>;
             bindings = <&lt2 2 ESCAPE>, <&kp TAB>;
         };
+
+        mb1: mb1 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <250>;
+            quick-tap-ms = <250>;
+            require-prior-idle-ms = <200>;
+            bindings = <&mkp>, <&TAP>;
+
+            label = "MB1";
+        };
     };
 
     macros {
@@ -353,11 +365,11 @@
         MOUSE_L_LAYER {
             display-name = "mouse_l_layer";
             bindings = <
-&trans  &trans     &trans          &trans     &trans   &trans  &trans  &trans   &trans     &trans          &trans     &trans
-&trans  &mkp RCLK  &mkp_mo 7 MCLK  &mkp LCLK  &dclick  &trans  &trans  &dclick  &mkp LCLK  &mkp_mo 7 MCLK  &mkp RCLK  &trans
-&trans  &trans     &mkp MB5        &mkp MB4   &trans   &trans  &trans  &trans   &mkp MB4   &mkp MB5        &trans     &trans
-&trans  &trans     &trans          &trans     &trans   &trans  &trans  &trans   &trans     &trans          &trans     &trans
-                   &trans          &trans     &trans   &trans  &trans  &trans   &trans     &trans
+&trans  &trans     &trans          &trans     &trans   &trans  &trans  &trans       &mkp MB4        &mkp MB5   &trans  &trans
+&trans  &mkp RCLK  &mkp_mo 7 MCLK  &mkp LCLK  &dclick  &trans  &trans  &mb1 LCLK 0  &mkp_mo 7 MCLK  &mkp RCLK  &trans  &trans
+&trans  &trans     &mkp MB5        &mkp MB4   &trans   &trans  &trans  &trans       &mkp MB4        &mkp MB5   &trans  &trans
+&trans  &trans     &trans          &trans     &trans   &trans  &trans  &trans       &trans          &trans     &trans  &trans
+                   &trans          &trans     &trans   &trans  &trans  &trans       &trans          &trans
             >;
         };
 
