@@ -232,7 +232,7 @@
 &kp LCTRL       &mt2 LCTRL A       &lt2 8 S         &mt2 LANGUAGE_2 D    &mt2 LANGUAGE_1 F  &kp G          &kp H             &mkp_tap LCLK J   &mt2 LG(SPACE) K     &mkp_tap RCLK L  &mt2 LEFT_SHIFT MINUS  &mt2 SQT RBKT
 &kp LSHFT       &mt2 LEFT_SHIFT Z  &mt2 LEFT_ALT X  &kp C                &kp V              &kp B          &kp N             &kp M             &kp COMMA            &kp PERIOD       &mt2 UP SLASH          &kp BSLH
 &tog 10         &kp LEFT_WIN       &kp LEFT_ALT     &mt2 LEFT_GUI SPACE  &lt2 8 TAB         &cppsx         &mo SYSTEM_LAYER  &lt2 9 BACKSPACE  &mt2 LEFT_GUI ENTER  &kp LEFT         &kp DOWN               &kp RIGHT
-                                   &allow_end       &allow_pagedown      &allow_home        &allow_pageup  &allow_pageup     &allow_home       &allow_pagedown      &allow_end
+                                   &allow_end       &allow_pagedown      &allow_home        &allow_pageup  &trans            &trans            &trans               &trans
             >;
         };
 
