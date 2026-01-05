@@ -228,11 +228,11 @@
             sensor-bindings = <&scroll_up_down>, <&scroll_up_down>;
 
             bindings = <
-&mt2 SEMI LBKT  &kp Q                 &kp W            &kp E                &kp R              &kp T         &kp Y   &kp U             &kp I                &kp O            &kp P                  &mt2 LS(LG(D)) LS(MINUS)
-&kp LCTRL       &mt2 LCTRL A          &lt2 10 S        &mt2 LANGUAGE_2 D    &mt2 LANGUAGE_1 F  &kp G         &kp H   &mkp_tap LCLK J   &mt2 LG(SPACE) K     &mkp_tap RCLK L  &mt2 LEFT_SHIFT MINUS  &mt2 SQT RBKT
-&kp LSHFT       &mt2 LEFT_SHIFT Z     &mt2 LEFT_ALT X  &kp C                &kp V              &kp B         &kp N   &kp M             &kp COMMA            &kp PERIOD       &mt2 UP SLASH          &kp BSLH
-&kp LA(M)       &mt2 LEFT_WIN ESCAPE  &kp LEFT_ALT     &mt2 LEFT_GUI SPACE  &lt2 9 TAB         &cppsx        &mo 3   &lt2 1 BACKSPACE  &mt2 LEFT_GUI ENTER  &kp LEFT         &kp DOWN               &kp RIGHT
-                                      &kp RIGHT_ARROW  &kp DOWN_ARROW       &kp LEFT_ARROW     &kp UP_ARROW  &trans  &trans            &trans               &trans
+&mt2 SEMI LBKT  &kp Q                 &kp W            &kp E              &kp R              &kp T         &kp Y   &kp U             &kp I                &kp O            &kp P                  &mt2 LS(LG(D)) LS(MINUS)
+&kp LCTRL       &mt2 LCTRL A          &lt2 10 S        &mt2 LANGUAGE_2 D  &mt2 LANGUAGE_1 F  &kp G         &kp H   &mkp_tap LCLK J   &mt2 LG(SPACE) K     &mkp_tap RCLK L  &mt2 LEFT_SHIFT MINUS  &mt2 SQT RBKT
+&kp LSHFT       &mt2 LEFT_SHIFT Z     &mt2 LEFT_ALT X  &kp C              &kp V              &kp B         &kp N   &kp M             &kp COMMA            &kp PERIOD       &mt2 UP SLASH          &kp BSLH
+&kp LA(M)       &mt2 LEFT_WIN ESCAPE  &kp LEFT_ALT     &kp SPACE          &lt2 9 TAB         &cppsx        &mo 3   &lt2 1 BACKSPACE  &mt2 LEFT_GUI ENTER  &kp LEFT         &kp DOWN               &kp RIGHT
+                                      &kp RIGHT_ARROW  &kp DOWN_ARROW     &kp LEFT_ARROW     &kp UP_ARROW  &trans  &trans            &trans               &trans
             >;
         };
 
