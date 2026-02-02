@@ -209,6 +209,18 @@
 
             label = "MKP_TAP";
         };
+
+        tap_mkp: tap_mkp {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <125>;
+            bindings = <&kp>, <&mkp>;
+
+            label = "TAP_MKP";
+        };
     };
 
     macros {
@@ -275,10 +287,10 @@
         MOUSE_R_LAYER {
             display-name = "mouse_r_layer";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &mkp MB4       &mkp MB5   &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &kp LG(SPACE)  &mkp MCLK  &mkp RCLK  &mo 5
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &mkp MB4       &mkp MB5   &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans         &trans     &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &mkp MB4       &mkp MB5   &trans                    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &kp LG(SPACE)  &mkp MCLK  &tap_mkp LEFT_SHIFT RCLK  &mo 5
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &mkp MB4       &mkp MB5   &trans                    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans         &trans     &trans                    &trans
                 &trans  &trans  &trans  &trans  &trans  &trans     &trans         &trans
             >;
         };
