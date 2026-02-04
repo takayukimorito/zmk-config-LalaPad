@@ -230,6 +230,22 @@
             bindings = <&mkp LCLK>;
             label = "TAP";
         };
+
+        maclay: maclay {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0>, <&macro_wait_time 200>, <&to 0>;
+
+            label = "MACLAY";
+        };
+
+        winlay: winlay {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 3>, <&macro_wait_time 200>, <&to 1>;
+
+            label = "WINLAY";
+        };
     };
 
     keymap {
@@ -241,11 +257,23 @@
 
             bindings = <
 &mt2 SEMI LBKT  &kp Q                 &kp W            &kp E              &kp R              &kp T         &kp Y   &kp U             &kp I                &kp O            &kp P                  &mt2 LS(LG(D)) LS(MINUS)
-&kp LCTRL       &mt2 LCTRL A          &lt2 9 S         &mt2 LANGUAGE_2 D  &mt2 LANGUAGE_1 F  &kp G         &kp H   &mkp_tap LCLK J   &mt2 LG(SPACE) K     &mkp_tap RCLK L  &mt2 LEFT_SHIFT MINUS  &mt2 SQT RBKT
+&kp LCTRL       &mt2 LCTRL A          &lt2 10 S        &mt2 LANGUAGE_2 D  &mt2 LANGUAGE_1 F  &kp G         &kp H   &mkp_tap LCLK J   &mt2 LG(SPACE) K     &mkp_tap RCLK L  &mt2 LEFT_SHIFT MINUS  &mt2 SQT RBKT
 &kp LSHFT       &mt2 LEFT_SHIFT Z     &mt2 LEFT_ALT X  &kp C              &kp V              &kp B         &kp N   &kp M             &kp COMMA            &kp PERIOD       &mt2 UP SLASH          &kp BSLH
-&kp LA(M)       &mt2 LEFT_WIN ESCAPE  &kp LEFT_ALT     &kp SPACE          &lt2 9 TAB         &cppsx        &mo 3   &lt2 1 BACKSPACE  &mt2 LEFT_GUI ENTER  &kp LEFT         &kp DOWN               &kp RIGHT
+&kp LA(M)       &mt2 LEFT_WIN ESCAPE  &kp LEFT_ALT     &kp SPACE          &lt2 10 TAB        &cppsx        &mo 4   &lt2 2 BACKSPACE  &mt2 LEFT_GUI ENTER  &kp LEFT         &kp DOWN               &kp RIGHT
                                       &kp RIGHT_ARROW  &kp DOWN_ARROW     &kp LEFT_ARROW     &kp UP_ARROW  &trans  &trans            &trans               &trans
             >;
+        };
+
+        windows {
+            bindings = <
+&mt2 SEMI LBKT  &kp Q              &kp W      &kp E              &kp R              &kp T         &kp Y   &kp U             &kp I             &kp O            &kp P                  &kp ESCAPE
+&kp LCTRL       &mt2 LCTRL A       &kp S      &mt2 LANGUAGE_2 D  &mt2 LANGUAGE_1 F  &kp G         &kp H   &mkp_tap LCLK J   &kp K             &mkp_tap RCLK L  &mt2 LEFT_SHIFT MINUS  &kp APOS
+&kp LSHFT       &mt2 LEFT_SHIFT Z  &kp X      &kp C              &kp V              &kp B         &kp N   &kp M             &kp COMMA         &kp DOT          &mt2 UP_ARROW FSLH     &kp BSLH
+&mkp LCLK       &kp LGUI           &kp LALT   &kp SPACE          &lt2 10 TAB        &cppsx        &mo 4   &lt2 2 BACKSPACE  &mt2 LCTRL ENTER  &kp LEFT_ARROW   &kp DOWN_ARROW         &kp RIGHT_ARROW
+                                   &kp RIGHT  &kp DOWN_ARROW     &kp LEFT_ARROW     &kp UP_ARROW  &trans  &trans            &trans            &trans
+            >;
+
+            sensor-bindings = <&scroll_up_down>, <&scroll_up_down>;
         };
 
         suuji {
@@ -279,7 +307,7 @@
 &trans  &trans  &trans  &trans  &trans       &trans      &out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4
 &trans  &trans  &trans  &trans  &bootloader  &sys_reset  &sys_reset    &bootloader   &studio_unlock  &bt BT_CLR    &bt BT_CLR_ALL  &trans
 &trans  &trans  &trans  &trans  &trans       &trans      &trans        &trans        &trans          &trans        &trans          &trans
-&trans  &trans  &trans  &trans  &trans       &trans      &trans        &trans        &trans          &trans        &trans          &trans
+&trans  &trans  &trans  &trans  &trans       &trans      &trans        &maclay       &winlay         &trans        &trans          &trans
                 &trans  &trans  &trans       &trans      &trans        &trans        &trans          &trans
             >;
         };
@@ -288,7 +316,7 @@
             display-name = "mouse_r_layer";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &mkp MB4       &mkp MB5   &trans                    &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &kp LG(SPACE)  &mkp MCLK  &tap_mkp LEFT_SHIFT RCLK  &mo 5
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &kp LG(SPACE)  &mkp MCLK  &tap_mkp LEFT_SHIFT RCLK  &mo 6
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &mkp MB4       &mkp MB5   &trans                    &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans         &trans     &trans                    &trans
                 &trans  &trans  &trans  &trans  &trans  &trans     &trans         &trans
@@ -310,7 +338,7 @@
             display-name = "mouse_l_layer";
             bindings = <
 &trans  &trans     &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&mo 7   &mkp RCLK  &mkp MCLK  &mkp LCLK  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&mo 8   &mkp RCLK  &mkp MCLK  &mkp LCLK  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans     &mkp MB5   &mkp MB4   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans     &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
                    &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans
